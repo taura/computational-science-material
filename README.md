@@ -50,7 +50,8 @@ rm -rf ~/.local/share/jupyter/kernels/wisteria
 
 <img src="img/wisteria_jupyter.png" />
 
-* 試しに `01_intro/intro.ipynb` を開いて実行してみる。AI Tutorなどが無事動いたら成功
+* 試しに左のファイル一覧から `lustre/computational-science-material/01_intro/intro.ipynb` を開いて実行してみよ。
+* AI Tutorなどが無事動いたら成功
 
 # 教材の構成
 
