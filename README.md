@@ -16,7 +16,8 @@ ssh t?????@wisteria.cc.u-tokyo.ac.jp
 * 本レポジトリをダウンロード
 
 ```
-cd /work/gt69/t69???
+ln -s /work/gt69/$USER ~/.notebook/lustre
+cd ~/.notebook/lustre
 git clone https://github.com/taura/computational-science-material.git
 ```
 
@@ -46,6 +47,8 @@ rm -rf ~/.local/share/jupyter/kernels/wisteria
 * うまく行ったら Wisteria の Jupyter 環境 https://wisteria08.cc.u-tokyo.ac.jp:8000/jupyterhub/ へアクセス
 
 `Python 3.14 (wisteria)` というアイコンが現れていることを確認
+
+<img src="img/wisteria_jupyter.png" />
 
 * 試しに `01_intro/intro.ipynb` を開いて実行してみる。AI Tutorなどが無事動いたら成功
 
