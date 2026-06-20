@@ -1,0 +1,18 @@
+# エディタのバックアップ / OS
+*~
+.DS_Store
+
+# Python / Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# セルを実行すると生じる成果物 (コンパイル結果・ジョブ出力など)
+*.exe
+*.o
+*.mod
+*.s
+*.ll
+*.out
+0output.txt
+data.txt
