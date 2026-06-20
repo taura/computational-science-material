@@ -1,9 +1,9 @@
 # What is this?
 
 * 計算科学概論（田浦分）の教材
-* Wisteria の Jupyter 環境 https://wisteria08.cc.u-tokyo.ac.jp:8000/jupyterhub/ で OpenMP マルチコア、GPU, SIMD, 高性能計算などを、AIも使いながら効率的に学べる環境
+* Wisteria の Jupyter 環境で OpenMP マルチコア、GPU, SIMD, 高性能計算などを、AIも使いながら効率的に学べる環境
 
-## Wisteria での設定作業
+# Wisteria での設定作業
 
 * Wisteria に ssh でログイン
 
@@ -49,9 +49,12 @@ rm -rf ~/.local/share/jupyter/kernels/wisteria
 
 * 試しに `01_intro/intro.ipynb` を開いて実行してみる。AI Tutorなどが無事動いたら成功
 
-## 教材の構成
+# 教材の構成
 
-* 番号順に進める。各フォルダにそのトピックの解説ノートブック (`02_parallel/parallel.ipynb` など) がある。
+* `01_intro` は C++ でやりたいが C++ を知らない、 Fortran でやりたいが Fortran を知らない人向けの入門。スキップ可能。
+* `02_parallel` 〜 `13_ilp` は OpenMP プログラミング (マルチコアCPU, GPU) および SIMD の基礎。そこにある練習問題を一つ以上解く
+* `14_montecarlo` 以降は、易難含めた、計算科学、機械学習ででてくる計算を題材とした応用問題
+* この内のどれか、もしくは自分で設定した問題を選んで、CPU, GPU, またはその両方で高速化やその性能測定を行うことが目標
 
 | | トピック | | トピック |
 |---|---|---|---|
@@ -66,9 +69,12 @@ rm -rf ~/.local/share/jupyter/kernels/wisteria
 | `09_gpu_map` | GPU データ移動 | `19_pinn` | PINN |
 | `10_gpu_speedup` | GPU 台数効果 | | |
 
-* 各トピックの `problems/` の下に練習問題がある。問題ごとに
-  * `problem.md` … 問題文
-  * `xxx.ipynb` … 解いて実行するノートブック (ここで `xxx.cpp` / `xxx.f90` を編集・コンパイル・実行する)
-* ノートブック内の `TODO` コメントの箇所を埋めるのが課題。分からないときは AI チュータ (`%%hey`) に質問してよい (使い方は各ノートブックの末尾を参照)。
+* 各トピックのディレクトリ直下の `.ipynb` をまず読んで基礎を理解する
+* 各トピックの `problems/` の下に練習問題がある。問題ごとにディレクトリがありその直下にある `.ipynb` を開いて作業
+  * `problem.md`, `.cpp`, `.f90` があるが `.ipynb` に埋め込まれているので見る必要はない
+  * `.ipynb` ではなく自分のエディタで作業推したい人は, `.cpp`, `.f90` を直接開いてもよい
+* `TODO` コメントの箇所を埋めるのが課題。
+* 分からないときは `.ipynb` から AI チュータ (`%%hey`) に質問できる。
+  * 答えを聞くのではなく、一般的な質問や自分の答えへのフィードバックを得るためのもの。
 * 計算ノードへのジョブ投入は `%%bash_submit` セルで行う (ログインノードで軽く試すときは `%%bash_` に書き換える)。
 
