@@ -17,7 +17,7 @@ ssh t?????@wisteria.cc.u-tokyo.ac.jp
 
 ```
 cd /work/gt69/t69???
-git clone .... <- 新URL
+git clone https://github.com/taura/computational-science-material.git
 ```
 
 * 本授業用のPython環境を導入するためコマンドラインで以下を実行
