@@ -1,0 +1,53 @@
+// 応用問題の依存関係。 A -> B は「B は A に依存 (B の前に A をやると良い)」。
+// SVG に変換: dot -Tsvg roadmap.dot -o roadmap.svg
+digraph roadmap {
+  rankdir=LR;
+  fontname="sans-serif";
+  node [shape=box, style="rounded,filled", fillcolor="#eef3fb", fontname="sans-serif"];
+  edge [color="#555555"];
+
+  subgraph cluster_mc {
+    label="モンテカルロ法"; style=filled; color="#f4f7f2";
+    n1  [label="1 ガチャ\n(期待値) ★"];
+    n2  [label="2 パーコレーション\n(相転移) ★★★"];
+  }
+  subgraph cluster_pde {
+    label="偏微分方程式 (差分法)"; style=filled; color="#f4f7f2";
+    n3  [label="3 2D熱伝導\n(定常) ★★"];
+    n4  [label="4 波動方程式\n★★"];
+    n5  [label="5 拡散方程式\n★★"];
+  }
+  subgraph cluster_nbody {
+    label="N体問題"; style=filled; color="#f4f7f2";
+    n6  [label="6 N体\n(重力) ★★"];
+    n7  [label="7 Boids\n(群れ) ★★"];
+  }
+  subgraph cluster_linalg {
+    label="線形代数"; style=filled; color="#f4f7f2";
+    n8  [label="8 CG法\n(連立一次方程式) ★★★"];
+    n9  [label="9 固有振動モード\n(べき乗法) ★★"];
+    n10 [label="10 すごろく定常分布\n(べき乗法) ★★"];
+  }
+  subgraph cluster_ml {
+    label="AI (ニューラルネット)"; style=filled; color="#f4f7f2";
+    n11 [label="11 MNIST推論\n★★"];
+    n12 [label="12 回帰の学習\n★★"];
+    n13 [label="13 MLP学習\n★★★"];
+  }
+  subgraph cluster_pinn {
+    label="PINN"; style=filled; color="#f4f7f2";
+    n14 [label="14 PINN\n★★★★★"];
+  }
+
+  n1 -> n2;
+  n3 -> n4;
+  n3 -> n5;
+  n3 -> n8;
+  n8 -> n9;
+  n8 -> n10;
+  n6 -> n7;
+  n11 -> n12;
+  n12 -> n13;
+  n13 -> n14;
+  n3 -> n14 [style=dashed, label="PDEの理解"];
+}
