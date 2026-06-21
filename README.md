@@ -21,6 +21,11 @@ cd ~/.notebook/lustre
 git clone https://github.com/taura/computational-science-material.git
 ```
 
+* 注: この一件ややこしい手順は、
+  * 計算ノードからは Lustre のディレクトリ (`/work/gt69/$USER` の下) しか読めないのでそこダウンロードする
+  * 一方 Jupyter は `~/.notebook` の下しか読めないのでそこから見えるようにする
+という条件を満たすためにおこなっている
+
 * 本授業用のPython環境を導入するためコマンドラインで以下を実行
 
 ```
