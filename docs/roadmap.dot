@@ -35,8 +35,8 @@ digraph roadmap {
     n13 [label="13 MLP学習\n★★★"];
   }
   subgraph cluster_pinn {
-    label="PINN"; style=filled; color="#f4f7f2";
-    n14 [label="14 PINN\n★★★★★"];
+    label="PINN (物理情報ニューラルネット)"; style=filled; color="#f4f7f2";
+    n14 [label="14 PINN\n(物理情報NN)\n★★★★★"];
   }
 
   n1 -> n2;

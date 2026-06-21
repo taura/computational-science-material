@@ -22,7 +22,7 @@
 | 11 | AI (ニューラルネット) | MNIST 推論 | ★★ | `18_ml/problems/00_mnist_infer` |
 | 12 | AI (ニューラルネット) | 回帰の学習 | ★★ | `18_ml/problems/01_regression` |
 | 13 | AI (ニューラルネット) | MLP 学習 | ★★★ | `18_ml/problems/02_mlp_train` |
-| 14 | PINN | PINN | ★★★★★ | `19_pinn/problems/00_pinn` |
+| 14 | PINN | PINN (物理情報ニューラルネット) | ★★★★★ | `19_pinn/problems/00_pinn` |
 
 ## 依存関係グラフ
 
